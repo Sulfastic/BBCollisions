@@ -31,6 +31,8 @@ protected:
 	bool ENABLE_SIMULATION;
 
 public:
+	bill::vector maxPoint;
+	bill::vector minPoint;
 	BillRigidBody(BillRBIntegrator algorithm, vector position=vector({0.,0.,0.}), vector velocity=vector({0.,0.,0.}), quaternion rotation=quaternion({0.,0.,1.,0.}), vector angular=vector({0.1,0.1,0.1}), double mass=1.0, vector color=vector({1.0,0.0,0.0}), double step=0.2);
 	virtual ~BillRigidBody();
 	virtual void Draw();

@@ -22,7 +22,7 @@ public:
 	bill::vector get_versor(const unsigned int i); // zwraca wersor tworzący wierzchołek: 0:x, 1:y, 2:z
 	void get_vertices(std::vector<bill::vector>& vers); // zwraca std::vector wektorów do wierzchołków
 
-	void draw_bbox(std::vector<bill::vector> mesh);
+	void calculateBBox(std::vector<bill::vector> mesh);
 }; // end of class box
 
 #endif //end of box.h
