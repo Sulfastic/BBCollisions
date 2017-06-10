@@ -42,12 +42,10 @@ public:
     virtual void Act() {
         for (unsigned int i = 0; i < bodies.size(); ++i) {
             for (unsigned int j = 0; j < i; ++j) {
-                if (check(i,j)) {
-//        if(bill::vector::norm(bodies[i]->future_position() - bodies[j]->future_position())< bodies[i]->BS()+bodies[j]->BS()){
+                if (check(i, j)) {
                     bodies[i]->disable();
                     bodies[j]->disable();
                 }
-                std::cout << "minPoint: " << bodies[i]->minPoint << " maxPoint: " << bodies[i]->maxPoint << "\n";
             }
         }
     };
@@ -81,7 +79,6 @@ void mainLoop(void) {
     engine.step();
     renderScene();
 }
-
 
 void renderScene(void) {
     if (bill::GLaux::moveParallel | bill::GLaux::movePerpendicular | bill::GLaux::rotateParallel |
